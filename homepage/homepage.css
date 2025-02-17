@@ -1,0 +1,271 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #003366;
+    color: #fff;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header nav ul li a.active {
+    color: #ffcc00;
+}
+
+header nav ul li a.btn-login {
+    background: #ffcc00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #003366;
+}
+
+.hero {
+    background: url('images/hero_bg.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn-explore {
+    background: #ffcc00;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: #003366;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.features {
+    padding: 50px 10%;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #003366;
+}
+
+.feature-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.feature-cards .card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+}
+
+.feature-cards .card i {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.feature-cards .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.about {
+    display: flex;
+    padding: 50px 10%;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.about-content .btn-learn-more {
+    background: #003366;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.testimonials {
+    padding: 50px 10%;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #003366;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.testimonial-cards .card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+}
+
+.testimonial-cards .card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial-cards .card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-cards .card h4 {
+    font-size: 1.2rem;
+    color: #003366;
+}
+
+footer {
+    background: #003366;
+    color: #fff;
+    padding: 50px 10%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    flex: 1;
+}
+
+.footer-links h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-social {
+    flex: 1;
+}
+
+.footer-social h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}

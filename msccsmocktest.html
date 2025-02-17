@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Test - MSc Computer Science</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .options label {
+            display: block;
+            padding: 5px;
+            background: #e4e4e4;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            font-size: 18px;
+        }
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+        }
+        .correct-answer {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Mock Test - MSc Computer Science</h2>
+        <form id="quizForm">
+            <div id="questions"></div>
+            <button type="button" class="submit-btn" onclick="calculateScore()">Submit</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script>
+        const questions = [
+            { question: "Which of the following is the primary purpose of a compiler?", options: ["To execute high-level code directly", "To translate high-level code into machine code", "To provide runtime environment for programs", "To manage memory in an operating system"], answer: "B" },
+            { question: "Which data structure is used for implementing recursive function calls?", options: ["Stack", "Queue", "Array", "Linked List"], answer: "A" },
+            { question: "In which of the following algorithms does the time complexity depend on the number of inversions in the input array?", options: ["Merge Sort", "Quick Sort", "Heap Sort", "Bubble Sort"], answer: "A" },
+            { question: "Which of the following is true about a deadlock in a system?", options: ["A deadlock occurs when two processes share a resource", "Deadlocks can be resolved automatically by the operating system", "A deadlock occurs when a process is waiting indefinitely for a resource that is held by another process", "Deadlocks do not affect system performance"], answer: "C" },
+            { question: "Which of the following algorithms is used to find the shortest path in a weighted graph with non-negative weights?", options: ["Dijkstra's Algorithm", "Kruskal's Algorithm", "Bellman-Ford Algorithm", "Floyd-Warshall Algorithm"], answer: "A" },
+            { question: "Which of the following is a key feature of Object-Oriented Programming (OOP)?", options: ["Procedural decomposition", "Inheritance and Polymorphism", "Use of primitive data types only", "Sequential execution"], answer: "B" },
+            { question: "In SQL, which of the following is used to combine the results of two or more SELECT queries?", options: ["JOIN", "UNION", "INTERSECT", "GROUP BY"], answer: "B" },
+            { question: "Which of the following is an advantage of using a distributed database system?", options: ["Higher latency", "Single point of failure", "Improved availability and fault tolerance", "Easier to manage"], answer: "C" },
+            { question: "Which of the following is NOT a characteristic of a good hash function?", options: ["It should distribute keys uniformly across the hash table", "It should be easy to compute", "It should guarantee zero collisions", "It should have a small number of collisions"], answer: "C" },
+            { question: "What is the space complexity of a recursive function that uses a stack in its implementation?", options: ["O(1)", "O(n)", "O(n²)", "O(log n)"], answer: "B" },
+            { question: "Which of the following is the correct definition of Big-O notation?", options: ["It is used to describe the space complexity of an algorithm", "It describes the worst-case time complexity of an algorithm", "It defines the average time taken by an algorithm", "It describes the exact time complexity of an algorithm"], answer: "B" },
+            { question: "Which of the following is used to implement a priority queue?", options: ["Hash Table", "Binary Search Tree", "Heap", "Stack"], answer: "C" },
+            { question: "Which type of join in SQL returns all rows from the left table and matched rows from the right table, and NULL for non-matching rows from the right table?", options: ["INNER JOIN", "LEFT OUTER JOIN", "RIGHT OUTER JOIN", "CROSS JOIN"], answer: "B" },
+            { question: "Which of the following algorithms is used for solving the Traveling Salesman Problem (TSP)?", options: ["Dynamic Programming", "Divide and Conquer", "Greedy Algorithm", "All of the above"], answer: "D" },
+            { question: "Which of the following is the purpose of a Virtual Machine (VM) in a cloud computing environment?", options: ["To perform hardware-level computations", "To provide an isolated environment for running applications", "To increase the physical storage capacity of a system", "To manage user access and permissions"], answer: "B" }
+        ];
+
+        function loadQuestions() {
+            const container = document.getElementById('questions');
+            questions.forEach((q, index) => {
+                let questionBlock = `<div class='question'>${index + 1}. ${q.question}</div><div class='options'>`;
+                q.options.forEach((option, optIndex) => {
+                    const optionLetter = String.fromCharCode(65 + optIndex);
+                    questionBlock += `<label><input type='radio' name='q${index}' value='${optionLetter}'> ${optionLetter}) ${option}</label>`;
+                });
+                questionBlock += `</div><div class='correct-answer' id='answer${index}' style='display: none;'>Correct Answer: ${q.answer}</div>`;
+                container.innerHTML += questionBlock;
+            });
+        }
+
+        function calculateScore() {
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            questions.forEach((q, index) => {
+                const selected = form[`q${index}`].value;
+                if (selected === q.answer) {
+                    score++;
+                }
+                document.getElementById(`answer${index}`).style.display = 'block';
+            });
+            document.getElementById('result').textContent = `Your score: ${score}/${questions.length}`;
+        }
+
+        window.onload = loadQuestions;
+    </script>
+</body>
+</html>
