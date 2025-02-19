@@ -46,6 +46,18 @@
         color: #000000; /* Black text */
         cursor: pointer;
     }
+
+        input[type="file"]::file-selector-button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="file"]::file-selector-button:hover {
+        background-color: #45a049;
+    }
     button {
         background-color: #4CAF50;
         color: rgb(255, 255, 255);

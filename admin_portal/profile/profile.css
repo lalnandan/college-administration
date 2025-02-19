@@ -1,0 +1,176 @@
+/* 🌟 Advanced Professional Admin Profile Tab UI */
+
+/* Universal Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 250px;
+    background: #0f3460;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00aaff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #00aaff;
+    transform: scale(1.05);
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #16213e;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #00aaff;
+}
+
+/* Student Profile Section */
+.profile-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tabs Section */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #00aaff;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tabs button:hover, .tabs button.active {
+    background: #00aaff;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Profile Information */
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-info .details, .profile-info .photo {
+    flex: 1;
+    padding: 20px;
+}
+
+.profile-info .photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00aaff;
+}
+
+/* AI Glow Effect */
+.glowing-text {
+    font-size: 18px;
+    text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #00aaff; }
+    to { text-shadow: 0 0 15px #00aaff; }
+}
+
+/* Buttons */
+.button {
+    padding: 10px 20px;
+    background: #00aaff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #0088cc;
+    transform: scale(1.05);
+}
+
+/* Floating AI Elements */
+.particle {
+    position: absolute;
+    background: rgba(0, 170, 255, 0.8);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: floatParticles 10s infinite ease-in-out;
+}
+
+@keyframes floatParticles {
+    0% { transform: translateY(0px); opacity: 0.7; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(0px); opacity: 0.7; }
+}
+

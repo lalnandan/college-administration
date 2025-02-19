@@ -1,0 +1,114 @@
+
+1)
+
+Database for admission 
+    
+    CREATE TABLE IF NOT EXISTS admissions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    dob DATE NOT NULL,
+    gender ENUM('Male', 'Female', 'Other') NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone VARCHAR(15) NOT NULL,
+    course VARCHAR(100) NOT NULL,
+    start_date DATE NOT NULL,
+    address TEXT NOT NULL,
+    city VARCHAR(100) NOT NULL,
+    state VARCHAR(100) NOT NULL,
+    postal_code VARCHAR(10) NOT NULL,
+    referral_source VARCHAR(100) NOT NULL,
+    message TEXT,
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-----------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+ALTER TABLE admissions 
+ADD COLUMN reset_token VARCHAR(255) NULL,
+ADD COLUMN reset_token_expires DATETIME NULL;
+
+-----------------------------------------------------------------------------------
+ALTER TABLE admission_forms ADD COLUMN profile_photo VARCHAR(255) NULL;
+
+
+2)
+DB name - contact_form_tab
+
+Create a new database:
+
+Click on New in phpMyAdmin.
+Enter contact_db (or any name) and click Create.
+Create a table named contacts:
+
+Click on the SQL tab and run this query:
+sql
+Copy
+Edit
+CREATE TABLE contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    subject VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-----------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+3) Event_registration_db
+
+-- Step 1: Create Database
+CREATE DATABASE event_registration_db;
+
+-- Step 2: Use the Database
+USE event_registration_db;
+
+-- Step 3: Create Table for Storing Event Registrations
+CREATE TABLE registrations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone VARCHAR(15) NOT NULL,
+    event_selected VARCHAR(100) NOT NULL,
+    comments TEXT,
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+
+4)  Student Reviews 
+
+CREATE DATABASE student_reviews;
+
+USE student_reviews;
+
+CREATE TABLE reviews (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    rating INT CHECK (rating BETWEEN 1 AND 5),
+    review TEXT NOT NULL,
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+------------------------------------------------------------
+---------------------------------------------------------------
+
+USE student_reviews;
+
+CREATE TABLE testimonials (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    video_path VARCHAR(255) DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+
+
+
+
+
+

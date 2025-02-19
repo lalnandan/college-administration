@@ -1,0 +1,13 @@
+crete database admin
+
+CREATE TABLE admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO admins (username, password, email) 
+VALUES ('admin', '$2y$10$5M1UW1zXrVvoBauXFAaVaOmD2N7s1FSqmmhf90E8xmQwfKZjrB3om', 'admin@example.com');
+

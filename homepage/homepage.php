@@ -138,14 +138,14 @@
         <h2>What Our Students Say</h2>
         <div class="testimonial-cards">
             <div class="card">
-                <img src="images/student1.jpg" alt="Lalnandan Yetalkar">
+                <img src="/college/homepage/images/red_kingdom_.png" alt="Lalnandan Yetalkar">
                 <p>"The administrative system made it so easy to track my attendance and grades. Highly recommended!"</p>
-                <h4>- John Doe</h4>
+                <h4>- Lalnandan Yetalkar </h4>
             </div>
             <div class="card">
                 <img src="images/student2.jpg" alt="snehalata kulkarni">
                 <p>"The faculty management system is a game-changer. It saves so much time and effort."</p>
-                <h4>- Jane Smith</h4>
+                <h4>- Snehalata Kulkarni</h4>
             </div>
             <div class="card">
                 <img src="images/student3.jpg" alt="Student 3">

@@ -87,14 +87,14 @@
         <p>Find the study materials for different subjects below:</p>
 
         <ul>
-            <li><a href="#">BCA - Computer Science Fundamentals (PDF)</a></li>
-            <li><a href="#">BCA - Java Programming Study Material (PDF)</a></li>
-            <li><a href="#">MSC CS - Algorithms and Data Structures (eBook)</a></li>
-            <li><a href="#">MSC CS - Advanced Web Development (PDF)</a></li>
-            <li><a href="#">BCS - Business Concepts & Strategy (PDF)</a></li>
-            <li><a href="#">MSC CS - Software Engineering Study Notes (PDF)</a></li>
+            <li><a href="/college/studymaterial/notes/computer fundamentals.pdf">BCA - Computer Science Fundamentals (PDF)</a></li>
+            <li><a href="http://localhost/college/studymaterial/notes/javanotes5.pdf">BCA - Java Programming Study Material (PDF)</a></li>
+            <li><a href="/college/studymaterial/notes/data structures and algorithms.pdf">MSC CS - Algorithms and Data Structures (eBook)</a></li>
+            <li><a href="/college/studymaterial/notes/web devlopment.pdf">MSC CS - Advanced Web Development (PDF)</a></li>
+            <li><a href="/college/studymaterial/notes/Business Analysis.pdf">BCS - Business Concepts & Strategy (PDF)</a></li>
+            <li><a href="/college/studymaterial/notes/software engineering.pdf">MSC CS - Software Engineering Study Notes (PDF)</a></li>
             <li><a href="/college/studymaterial/notes/BCA-datastructuresnotes.pdf">BCA - DATA STRUCTURES NOTES (PDF)</a></li>
-            <li><a href="#">BCS - Marketing Management Resources (PDF)</a></li>
+            <li><a href="/college/studymaterial/notes/PGDBA_202_slm.pdf">BCS - Marketing Management Resources (PDF)</a></li>
         </ul>
         
         <p>For more study material, feel free to contact our support team or visit the <a href="https://www.librarything.com/home">online library</a>.</p>
