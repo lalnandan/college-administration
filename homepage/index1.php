@@ -110,7 +110,7 @@
                 <li><a href="/college/studymaterial/studymaterial1.php">Study Materials</a></li>
                 <li><a href="/college/studymaterial/mocktest.php">Mock Tests</a></li>
                 <li><a href="/college/studymaterial/assingnment and solutions.php">Assignments and Solutions</a></li>
-                <li><a href="/college/studymaterial/studymaterial1.php">Interactive Tools</a></li>
+                <li><a href="/college/studymaterial/intractive_tools.php">Interactive Tools</a></li>
             </ul>
         </li>
         <li>

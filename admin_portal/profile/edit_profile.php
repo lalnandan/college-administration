@@ -55,10 +55,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // ✅ Handle File Upload
     if (!empty($_FILES['profile_photo']['name'])) {
-        $targetDir = "G:/fgbjnhgjgh/htdocs/college/Admissions/uploads/"; // Ensure this folder exists
+        $targetDir = "G:/fgbjnhgjgh/htdocs/college/Admissions/uploads/";
         
         if (!is_dir($targetDir)) {
-            mkdir($targetDir, 0777, true); // Create directory if not exists
+            mkdir($targetDir, 0777, true);
         }
 
         $fileName = basename($_FILES['profile_photo']['name']);
@@ -70,10 +70,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if (in_array($fileType, $allowedTypes)) {
             if (move_uploaded_file($_FILES['profile_photo']['tmp_name'], $targetFilePath)) {
-                $profile_photo = "uploads/" . $newFileName; // Save relative path in DB
+                $profile_photo = "uploads/" . $newFileName; // Save relative path
                 $update_photo = true;
             } else {
-                echo "<script>alert('Error uploading photo!');</script>";
+                echo "<script>alert('Error moving uploaded file!');</script>";
             }
         } else {
             echo "<script>alert('Invalid file type! Only JPG, JPEG, PNG, and GIF allowed.');</script>";
@@ -101,6 +101,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -240,7 +242,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <!-- Edit Profile Tab -->
         <div id="edit" class="tab-content active">
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
+            
                 <input type="hidden" name="student_id" value="<?= htmlspecialchars($student['student_id']); ?>">
 
                 <label>Full Name:</label>
